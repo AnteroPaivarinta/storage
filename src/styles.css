@@ -1,0 +1,92 @@
+.div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+  }
+  
+.box {
+ 
+  width: 15%;
+  height: 15%;
+  border: 2px solid red;
+  background-color: grey;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #666;
+  text-align: center;
+  font-size: 35px;
+  height:15%;
+  width: 100%;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+.section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.section1 {
+  width: 30%;
+  background-color: black;
+  height: 100%; 
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.section2 {
+  width: 70%;
+  height: 100%; 
+  background-color: red;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  height: 75%;
+  background-color: red;
+  
+}
+
+/* Style the footer */
+.footer {
+  background-color: goldenrod;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+
+}
