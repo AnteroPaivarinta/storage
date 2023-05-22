@@ -7,13 +7,14 @@ const cors = require('cors')
 const upload = multer();
 const fileUpload = require('express-fileupload');
 const  AWS = require('aws-sdk');
+const dotenv = require('dotenv');
 
 const s3 = new AWS.S3({
   region: 'eu-north-1',
   apiVersion: '2006-03-01',
   credentials: {
-    accessKeyId: 'AKIATGA4OPNCNOJB33GA',
-    secretAccessKey: '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',
+    accessKeyId: process.env.AWS_S3_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_S3_SECRET_KEY,
   },
 });
 
