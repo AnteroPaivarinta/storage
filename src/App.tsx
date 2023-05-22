@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Buffer } from 'buffer';
 import { PDFDocument } from 'pdf-lib';
 import '../src/styles.css';
+
+
 function App() {
   const [file, setFile] = useState<any>();
   const [data, setData] =useState<any>();
@@ -30,18 +32,8 @@ function App() {
   }
    
   };
-
-
-
-  const renderPDF = async (pdfBuffer:any) => {
-   
-  };
-
-
  
   const handleDownload = (file:any) => {
-    console.log('FILE', file)
-
     try {
       const pdfBytes = new Uint8Array(file.file.Body.data);
       let blob:any = [];
@@ -61,7 +53,6 @@ function App() {
     } catch (error) {
       console.error('Virhe PDF-tiedoston muuntamisessa:', error);
     }
-    renderPDF(file.file.Body.data)
 
   };
 
@@ -99,7 +90,7 @@ function App() {
         </section>
       </div>
       <footer className='footer'>
-juu
+          Testi
       </footer>
     </div>
   );
